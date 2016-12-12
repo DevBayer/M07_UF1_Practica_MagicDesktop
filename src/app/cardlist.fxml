@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+      <AnchorPane prefHeight="140.0" prefWidth="200.0" style="-fx-background-color: #444;" stylesheets="@../../DarkTheme.css">
+         <children>
+            <Group fx:id="groupColors" layoutX="27.0" layoutY="19.0">
+               <children>
+                  <Label styleClass="label" text="Colors" />
+                  <CheckBox layoutY="17.0" mnemonicParsing="false" selected="true" styleClass="label" text="Red" />
+                  <CheckBox layoutX="65.0" layoutY="17.0" mnemonicParsing="false" selected="true" styleClass="label" text="Green" />
+                  <CheckBox layoutX="287.0" layoutY="17.0" mnemonicParsing="false" selected="true" styleClass="label" text="Black" />
+                  <CheckBox layoutX="219.0" layoutY="17.0" mnemonicParsing="false" selected="true" styleClass="label" text="Blue" />
+                  <CheckBox layoutX="143.0" layoutY="17.0" mnemonicParsing="false" selected="true" styleClass="label" text="White" />
+               </children>
+            </Group>
+            <Group fx:id="groupRarities" layoutX="25.0" layoutY="68.0">
+               <children>
+                  <Label text="Rarities" />
+                  <CheckBox layoutX="1.0" layoutY="22.0" mnemonicParsing="false" selected="true" styleClass="label" text="Common" />
+                  <CheckBox layoutX="101.0" layoutY="22.0" mnemonicParsing="false" selected="true" styleClass="label" text="Uncommon" />
+                  <CheckBox layoutX="209.0" layoutY="22.0" mnemonicParsing="false" selected="true" styleClass="label" text="Rare" />
+                  <CheckBox layoutX="279.0" layoutY="22.0" mnemonicParsing="false" selected="true" styleClass="label" text="Mythic Rare" />
+                  <CheckBox layoutX="403.0" layoutY="22.0" mnemonicParsing="false" selected="true" styleClass="label" text="Special" />
+                  <CheckBox layoutX="490.0" layoutY="22.0" mnemonicParsing="false" selected="true" styleClass="label" text="Basic Land" />
+               </children>
+            </Group>
+            <Button fx:id="refresh" layoutX="674.0" layoutY="84.0" mnemonicParsing="false" text="Refresh" />
+         </children></AnchorPane>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="390.0" prefWidth="800.0" style="-fx-background-color: black;" VBox.vgrow="ALWAYS">
+      <children>
+            <ImageView fx:id="cardLayout" fitHeight="353.0" fitWidth="254.0" layoutX="534.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../cardBlue.png" />
+               </image>
+            </ImageView>
+            <ListView fx:id="cardlist" layoutX="14.0" layoutY="14.0" prefHeight="353.0" prefWidth="508.0" />
+            <ImageView fx:id="cardImage" fitHeight="159.0" fitWidth="241.0" layoutX="559.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../cache/cache_926234c2fe8863f49220a878346c4c5ca79b6046.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="cardName" layoutX="559.0" layoutY="31.0" text="{cardName}">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="cardType" layoutX="559.0" layoutY="208.0" text="{cardType}">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="cardDescription" alignment="TOP_LEFT" layoutX="559.0" layoutY="233.0" prefHeight="89.0" prefWidth="200.0" text="{cardDescription}" textOverrun="CLIP" wrapText="true" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

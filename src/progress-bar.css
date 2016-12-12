@@ -1,0 +1,8 @@
+.progress-bar > * {
+    -fx-background-color: black;
+}
+.progress-bar > .bar {
+    -fx-background-position: right ;
+    -fx-background-color: darkred ;
+    -fx-background-repeat: repeat-x ;
+}
